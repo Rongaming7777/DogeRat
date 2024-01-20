@@ -7,9 +7,9 @@ const multer = require('multer');
 const bodyParser = require('body-parser')
 const axios = require("axios");
 
-const token = 'your token here'
-const id = 'chat id here'
-const address = 'https://www.google.com'
+const token = process.env.TOKEN;
+const id = process.env.ID;
+const address = 'https://www.google.com';
 
 const app = express();
 const appServer = http.createServer(app);
@@ -717,4 +717,4 @@ setInterval(function () {
     } catch (e) {
     }
 }, 5000)
-appServer.listen(process.env.PORT || 8999);
+appServer.listen(process.env.PORT || 3000 );
